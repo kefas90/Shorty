@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>shorty</title>
+    <meta charset="utf-8">
+</head>
+<body>
+
+    {% if error %}
+        {{ error }}
+    {% endif %}
+
+    <form action ="" method="POST">
+        {% csrf_token %}
+        <input type="text" name="url" placeholder="URL" value="{{ url }}">
+        <input type="submit" value="shorter!">
+    </form>
+</body>
+</html>
